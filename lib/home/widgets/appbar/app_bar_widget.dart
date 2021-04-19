@@ -7,13 +7,13 @@ class AppBarWidget extends PreferredSize {
       : super(
           preferredSize: Size.fromHeight(250),
           child: Container(
-            height: 260,
+            height: 280,
             child: Stack(
               children: [
                 Align(
                   alignment: Alignment.topCenter,
                   child: Container(
-                    height: 161,
+                    height: 180,
                     width: double.maxFinite,
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     decoration: BoxDecoration(gradient: AppGradients.linear),
