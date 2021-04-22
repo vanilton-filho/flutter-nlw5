@@ -3,6 +3,13 @@ import 'package:DevQuiz/home/widgets/chart/chart_widget.dart';
 import 'package:flutter/material.dart';
 
 class ScoreCardWidget extends StatelessWidget {
+  final int score;
+
+  const ScoreCardWidget({
+    Key? key,
+    required this.score,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -17,7 +24,7 @@ class ScoreCardWidget extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 14),
           child: Row(
             children: [
-              Expanded(flex: 2, child: ChartWidget()),
+              Expanded(flex: 2, child: ChartWidget(score: score)),
               Expanded(
                 flex: 3,
                 child: Padding(
