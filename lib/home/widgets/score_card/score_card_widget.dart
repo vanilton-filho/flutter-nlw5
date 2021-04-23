@@ -3,11 +3,11 @@ import 'package:DevQuiz/home/widgets/chart/chart_widget.dart';
 import 'package:flutter/material.dart';
 
 class ScoreCardWidget extends StatelessWidget {
-  final int score;
+  final double percent;
 
   const ScoreCardWidget({
     Key? key,
-    required this.score,
+    required this.percent,
   }) : super(key: key);
 
   @override
@@ -24,7 +24,7 @@ class ScoreCardWidget extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 14),
           child: Row(
             children: [
-              Expanded(flex: 2, child: ChartWidget(score: score)),
+              Expanded(flex: 2, child: ChartWidget(percent: percent)),
               Expanded(
                 flex: 3,
                 child: Padding(
