@@ -6,61 +6,66 @@ class QuizCardWidget extends StatelessWidget {
   final String title;
   final String completed;
   final double percent;
+  final VoidCallback onTap;
   const QuizCardWidget({
     Key? key,
     required this.title,
     required this.completed,
     required this.percent,
+    required this.onTap,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        border: Border.fromBorderSide(
-          BorderSide(
-            color: AppColors.border,
-          ),
-        ),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            height: 40,
-            width: 40,
-            child: Image.asset(AppImages.blocks),
-          ),
-          SizedBox(
-            height: 24,
-          ),
-          Expanded(
-            child: Text(
-              title,
-              style: AppTextStyles.heading15,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          border: Border.fromBorderSide(
+            BorderSide(
+              color: AppColors.border,
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                flex: 2,
-                child: Text(
-                  completed,
-                  style: AppTextStyles.body11,
-                ),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              height: 40,
+              width: 40,
+              child: Image.asset(AppImages.blocks),
+            ),
+            SizedBox(
+              height: 24,
+            ),
+            Expanded(
+              child: Text(
+                title,
+                style: AppTextStyles.heading15,
               ),
-              Expanded(
-                flex: 3,
-                child: ProgressIndicatorWidget(
-                  value: percent,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: Text(
+                    completed,
+                    style: AppTextStyles.body11,
+                  ),
                 ),
-              )
-            ],
-          )
-        ],
+                Expanded(
+                  flex: 3,
+                  child: ProgressIndicatorWidget(
+                    value: percent,
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

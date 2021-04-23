@@ -1,7 +1,7 @@
 [
   {
     "title": "NLW 5 Flutter",
-    "questionAnswered": 2,
+    "questionAnswered": 0,
     "image": "blocks",
     "level": "facil",
     "questions": [
@@ -15,12 +15,12 @@
         ]
       },
       {
-        "title": "Está curtindo o Flutter?",
+        "title": "O que tu acha do Flutter?",
         "awnsers": [
-          { "title": "Estou curtindo" },
-          { "title": "Amando curtindo" },
+          { "title": "Massa" },
+          { "title": "Top" },
           { "title": "Muito top" },
-          { "title": "Show de bola", "isRight": true }
+          { "title": "Massaaaa demais", "isRight": true }
         ]
       }
     ]
@@ -28,7 +28,7 @@
 
   {
     "title": "Gerenciamento de Estado",
-    "questionAnswered": 1,
+    "questionAnswered": 0,
     "image": "blocks",
     "level": "facil",
     "questions": [
